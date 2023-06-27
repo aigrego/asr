@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 type TaskType = "tts" | "asr" | "ts";
 
@@ -358,7 +358,8 @@ export default class NLSClient {
     }
 
     public uuid = () => {
-        return uuidv4().split("-").join("");
+        // return uuidv4().split("-").join("");
+        return "sdfsdfsdf-sdfsdfds-fdsf-sdf-sd-f-dsf-ds".split("-").join("");
     };
 
     public generateStartPayload = (text: string = ""): ITTSPayload | IASRPayload => {
