@@ -21,10 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: build nextJs app
+      - name: Build Next.js application
         run: npm run build
 
-      - name: export static page
+      - name: Export static page
         run: npm run export
 
       - name: Upload to COS
@@ -35,5 +35,5 @@ jobs:
           cos_bucket: ${{ secrets.COS_BUCKET }}
           cos_region: ${{ secrets.COS_REGION }}
           local_path: out
-          remote_path: out
+          remote_path: asr
           clean: true
