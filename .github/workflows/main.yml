@@ -19,7 +19,7 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm i
 
       - name: Upload to COS
         uses: TencentCloud/cos-action@v1
@@ -28,6 +28,6 @@ jobs:
           secret_key: ${{ secrets.COS_SECRET_KEY }}
           cos_bucket: ${{ secrets.COS_BUCKET }}
           cos_region: ${{ secrets.COS_REGION }}
-          local_path: public
-          remote_path: docroot/static
+          local_path: build
+          remote_path: ./
           clean: true
