@@ -19,7 +19,13 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm i
+        run: npm install
+
+      - name: build nextJs app
+        run: npm run build
+
+      - name: export static page
+        run: npm run export
 
       - name: Upload to COS
         uses: TencentCloud/cos-action@v1
@@ -28,6 +34,6 @@ jobs:
           secret_key: ${{ secrets.COS_SECRET_KEY }}
           cos_bucket: ${{ secrets.COS_BUCKET }}
           cos_region: ${{ secrets.COS_REGION }}
-          local_path: build
-          remote_path: ./
+          local_path: out
+          remote_path: out
           clean: true
