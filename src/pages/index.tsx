@@ -53,9 +53,12 @@ export default function Home() {
           {recording ? <RecordIcon>正在录音...</RecordIcon> : '开始录音'}
         </button>
 
-        <div className="w-full mt-4 hover:text-blue-600 hover:border-blue-600">
+        <div className="w-full mt-4 mx-2 hover:text-blue-600 hover:border-blue-600">
           <p className="text-xl text-center cursor-pointer">{message}</p>
         </div>
+        {/* <div className="w-full flex justify-center items-center">
+          <img className="w-52 h-52" src='/Wisdom-Journey-Square.png' />
+        </div> */}
 
         {/* <div className="flex flex-wrap items-start justify-start max-w-4xl mt-12">
           <a className="border border-solid border-gray-300 rounded-lg p-6 m-4 hover:text-blue-600 hover:border-blue-600">
